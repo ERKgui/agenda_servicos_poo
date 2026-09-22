@@ -1,0 +1,12 @@
+import { Servico } from "./Servico.js";
+
+export class Vistoria extends Servico {
+  constructor(codigo, cliente, descricao, local) {
+    super(codigo, cliente, descricao);
+    this.local = local;
+  }
+
+  executar() {
+    return `Realizando a inspecao no local: ${this.local}.`;
+  }
+}
