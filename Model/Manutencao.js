@@ -1,4 +1,4 @@
-import { Servico } from "./Servico.js";
+import { Servico } from "./Model";
 
 export class Manutencao extends Servico {
   constructor(codigo, cliente, descricao, defeito) {

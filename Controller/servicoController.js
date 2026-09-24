@@ -1,7 +1,7 @@
 import { Instalacao } from "../model/Instalacao.js";
 import { Manutencao } from "../model/Manutencao.js";
 import { Vistoria } from "../model/Vistoria.js";
-import { cadastrar, listarTodos, buscarPorIndice, atualizarPorIndice, excluirPorIndice } from "../repository/servicoRepository.js";
+import { cadastrar, listarTodos, buscarPorIndice, atualizarPorIndice, excluirPorIndice } from "../Repository/servicoRepository.js";
 
 export function cadastrarInstalacao(codigo, cliente, descricao, equipamento) {
   cadastrar(new Instalacao(codigo, cliente, descricao, equipamento));
@@ -43,6 +43,7 @@ export function listarServicos() {
   for (let i = 0; i < lista.length; i++) {
     const s = lista[i];
     const nomeTecnico = s.tecnico ? s.tecnico.nome : "nao definido";
-    console.log(`${i} - ${s.codigo} - ${s.cliente} - ${s.descricao} - ${s.status} - ${nomeTecnico} - ${s.executar()}`);
+    console.log(`${i})`);
+    console.log(` ${s.codigo} - ${s.cliente} - ${s.descricao} - ${s.status} - ${nomeTecnico} - ${s.executar()}`);
   }
 }
